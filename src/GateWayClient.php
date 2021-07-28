@@ -9,8 +9,7 @@ class GateWayClient
 {
     private $_client_id;
     private $_client_secret;
-    private $_gateway;
-    private $_access_token;
+    private $_gateway = 'https://gateway.haichuanlife.com';
 
     /**
      * @return mixed
@@ -18,14 +17,6 @@ class GateWayClient
     public function getAccessToken()
     {
         return $this->GatewayToken();
-    }
-
-    /**
-     * @param mixed $access_token
-     */
-    public function setAccessToken($access_token): void
-    {
-        $this->_access_token = $access_token;
     }
 
     private function GatewayToken(){
@@ -82,14 +73,5 @@ class GateWayClient
     {
         $this->_client_secret = $client_secret;
     }
-
-    /**
-     * @param mixed $gateway
-     */
-    public function setGateway($gateway): void
-    {
-        $this->_gateway = $gateway;
-    }
-
 
 }
