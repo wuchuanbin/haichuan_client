@@ -29,7 +29,7 @@ class GateWayClient
                 'client_secret'=>$this->_client_secret,
                 'grant_type'=>'client_credentials'
             ];
-            $data = $this->_RequestCloud($url,$post,false);
+            $data = $this->RequestCloud($url,$post,false);
             $cache->save('access_token',$data['access_token'],3500);
             return $data['access_token'];
         } else {
